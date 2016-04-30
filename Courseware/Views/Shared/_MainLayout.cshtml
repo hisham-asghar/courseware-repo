@@ -33,7 +33,7 @@
                 <div class="left_col scroll-view">
 
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Empty!</span></a>
+                        <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>OCW</span></a>
                     </div>
                     <div class="clearfix"></div>
 
@@ -42,21 +42,8 @@
                     @Html.Partial("~/Views/Layout/footer_buttons.cshtml")
                 </div>
             </div>
-
-            <!-- top navigation -->
-            <div class="top_nav">
-
-                <div class="nav_menu">
-                    <nav class="" role="navigation">
-                        <div class="nav toggle">
-                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                        </div>
-                    </nav>
-                </div>
-
-            </div>
-            <!-- /top navigation -->
-
+            @Html.Partial("~/Views/Layout/top_nav.cshtml")
+            
             <!-- page content -->
             <div class="right_col" role="main">
 

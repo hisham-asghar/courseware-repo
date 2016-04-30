@@ -130,6 +130,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ClassroomsController.cs" />
     <Compile Include="Controllers\SampleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -491,6 +492,9 @@
     <Content Include="Views\Layout\sidebar_menu.cshtml" />
     <Content Include="Views\Layout\quick_info.cshtml" />
     <Content Include="Views\Layout\PagePlugins.cshtml" />
+    <Content Include="Views\Layout\top_nav.cshtml" />
+    <Content Include="Views\Classrooms\Class_Layout.cshtml" />
+    <Content Include="Views\Classrooms\Class.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

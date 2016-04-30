@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@section Heading{
+    Classrooms
+}
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <div class="x_content">
+            <div class="col-xs-2">
+                <!-- required for floating -->
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs tabs-left">
+                    <li class="active">
+                        <a href="#info" data-toggle="tab">Information</a>
+                    </li>
+                    <li>
+                        <a href="#announce" data-toggle="tab">Announcements</a>
+                    </li>
+                    <li>
+                        <a href="#files" data-toggle="tab">Files</a>
+                    </li>
+                    <li>
+                        <a href="#posts" data-toggle="tab">Posts</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-xs-9">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="info">
+                        @RenderSection("Info", true);
+                    </div>
+                    <div class="tab-pane" id="announce">
+                        @RenderSection("Announce", true);
+                    </div>
+                    <div class="tab-pane" id="files">
+                        @RenderSection("Files", true);
+                    </div>
+                    <div class="tab-pane" id="posts">
+                        @RenderSection("Posts", true);
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+</div>
