@@ -134,6 +134,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -486,10 +487,13 @@
     <Content Include="Scripts\plugins\datatables\json\scroller-demo.json" />
     <Content Include="Scripts\plugins\maps\us-unemployment.json" />
     <Content Include="Views\Sample\Index.cshtml" />
+    <Content Include="Views\Layout\footer_buttons.cshtml" />
+    <Content Include="Views\Layout\sidebar_menu.cshtml" />
+    <Content Include="Views\Layout\quick_info.cshtml" />
+    <Content Include="Views\Layout\PagePlugins.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

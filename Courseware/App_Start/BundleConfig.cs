@@ -29,13 +29,14 @@ namespace Courseware
             bundles.Add(new StyleBundle("~/Content/css").Include(
                         "~/Content/css/bootstrap.min.css",
                         "~/Content/fonts/css/font-awesome.min.css",
-                        "~/Content/css/animate.min.css"));
-
-            bundles.Add(new StyleBundle("~/Content/css_custom").Include(
+                        "~/Content/css/animate.min.css",
                         "~/Content/css/custom.css",
                         "~/Content/css/maps/jquery-jvectormap-2.0.3.css",
                         "~/Content/css/icheck/flat/green.css",
                         "~/Content/css/floatexamples.css"));
+            bundles.Add(new StyleBundle("~/Content/fonts/css").Include(
+                        "~/Content/fonts/css/font-awesome.min.css"));
+
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
