@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Courseware.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +14,10 @@ namespace Courseware.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            User u = new User();
+            ViewBag.image = "/Content/images/img.jpg";
+            ViewBag.name = "Hisham";
+            return View(u);
         }
 
     }

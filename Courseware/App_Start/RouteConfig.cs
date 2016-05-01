@@ -16,7 +16,7 @@ namespace Courseware
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Sample", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Classrooms", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
