@@ -13,6 +13,11 @@ namespace Courseware.Controllers
 
         public ActionResult Index()
         {
+            object o = Session["user"];
+            if (o != null)
+            {
+                ViewBag.Login = (string)o;
+            }
             return View("Class");
         }
         public ActionResult Reports()

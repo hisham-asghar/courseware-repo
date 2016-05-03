@@ -1,13 +1,25 @@
 ﻿
 <!-- menu prile quick info -->
 <div class="profile">
-    <div class="profile_pic">
-        <img src="@ViewBag.image" alt="..." class="img-circle profile_img">
+            @if (ViewBag.Login == null)
+            {
+                <div class="profile_pic">
+                    <img src="~/Content/images/user.png" alt="..." class="img-circle profile_img">
+                </div>
+    <div class="profile_info">
+        <span>Welcome ...</span>
     </div>
+            }
+            else
+            {
+                <div class="profile_pic">
+                    <img src="~/Content/images/img.jpg" alt="..." class="img-circle profile_img">
+                </div>
     <div class="profile_info">
         <span>Welcome,</span>
-        <h2>@ViewBag.name</h2>
+        <h2>@ViewBag.Login</h2>
     </div>
+            }
 </div>
 <!-- /menu prile quick info -->
 

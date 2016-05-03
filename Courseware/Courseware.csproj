@@ -39,7 +39,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
@@ -134,7 +135,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ClassroomsController.cs" />
     <Compile Include="Controllers\courseController.cs" />
-    <Compile Include="Controllers\LogInController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\SampleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -480,13 +481,14 @@
     <Content Include="Views\Layout\top_nav.cshtml" />
     <Content Include="Views\Classrooms\Class_Layout.cshtml" />
     <Content Include="Views\Classrooms\Class.cshtml" />
-    <Content Include="Views\LogIn\Login.cshtml" />
-    <Content Include="Views\LogIn\signup.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\User\signup.cshtml" />
     <Content Include="Views\course\material.cshtml" />
     <Content Include="Views\course\books.cshtml" />
     <Content Include="Views\Classrooms\Reports.cshtml" />
     <Content Include="Views\course\certificate.cshtml" />
     <Content Include="Views\Classrooms\Feedback.cshtml" />
+    <Content Include="Views\course\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
