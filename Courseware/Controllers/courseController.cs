@@ -31,5 +31,18 @@ namespace Courseware.Controllers
         {
             return View();
         }
+        public ActionResult SearchByName()
+        {
+            return View();
+        }
+        public ActionResult SearchByDepartment()
+        {
+            return View();
+        }
+        public ActionResult ViewAll()
+        {
+            return View();
+        }
+
     }
 }
