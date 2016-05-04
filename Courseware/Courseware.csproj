@@ -502,6 +502,7 @@
     <Content Include="Views\Books\SearchByDepartment.cshtml" />
     <Content Include="Views\Books\ViewAll.cshtml" />
     <Content Include="Views\Statistics\ContactUs.cshtml" />
+    <Content Include="Views\Statistics\MonthlyStat.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

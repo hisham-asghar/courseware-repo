@@ -19,6 +19,10 @@ namespace Courseware.Controllers
         {
             return View();
         }
+        public ActionResult MonthlyStat()
+        {
+            return View();
+        }
 
     }
 }
