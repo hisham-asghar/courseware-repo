@@ -41,5 +41,22 @@ namespace Courseware.Controllers
                 return View("Login");
             }
         }
+
+        [HttpPost]
+        public ActionResult Register()
+        {
+            var uname = Request.Form["username"];
+            var pass = Request.Form["password"];
+            if (uname == "Hisham1234" && pass == "Abc12345")
+            {
+                Session["user"] = uname;
+                return Redirect("~/");
+            }
+            else
+            {
+                ViewBag.error = "Invalid username or Password";
+                return Redirect("~/User#toregitser");
+            }
+        }
     }
 }

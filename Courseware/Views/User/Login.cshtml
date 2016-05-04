@@ -40,11 +40,15 @@
     <!-- daterangepicker -->
     <script type="text/javascript" src="~/Scripts/plugins//moment/moment.min.js"></script>
     <script type="text/javascript" src="~/Scripts/plugins//datepicker/daterangepicker.js"></script>
-
 </head>
 
 <body style="background:#F7F7F7;">
-
+    @if (ViewBag.Error != null)
+    {
+        <script>
+            alert("@ViewBag.Error");
+        </script>
+    }
     <div class="">
         <a class="hiddenanchor" id="toregister"></a>
         <a class="hiddenanchor" id="tologin"></a>
@@ -90,11 +94,12 @@
             </div>
             <div id="register" class="animate form">
                 <section class="login_content">
-                    <form>
+                    <form action="/User/Regitser" method="post">
                         <h1>Create Account</h1>
                         <div>
                             <label class="left">First Name</label>
                             <input type="text" class="form-control" placeholder="First Name" required="" pattern="^[a-zA-Z]{1,20}$" />
+                            <span>@ViewBag.Fname</span>
                         </div>
                         <div>
                             <label class="left">Last Name</label>
