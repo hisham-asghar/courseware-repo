@@ -139,6 +139,7 @@
     <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\ClassroomsController.cs" />
     <Compile Include="Controllers\courseController.cs" />
+    <Compile Include="Controllers\StatisticsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\SampleController.cs" />
     <Compile Include="Global.asax.cs">
@@ -500,6 +501,7 @@
     <Content Include="Views\Books\SearchByBookName.cshtml" />
     <Content Include="Views\Books\SearchByDepartment.cshtml" />
     <Content Include="Views\Books\ViewAll.cshtml" />
+    <Content Include="Views\Statistics\ContactUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
