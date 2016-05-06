@@ -15,7 +15,7 @@ namespace Courseware.Controllers
         {
             return View();
         }
-         public ActionResult Search()
+        public ActionResult Search()
         {
             return View();
         }

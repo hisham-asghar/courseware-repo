@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courseware", "Courseware\Courseware.csproj", "{32D90202-5BDB-4C67-899B-1B2890669B96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL", "BAL\BAL.csproj", "{7B792E2F-F558-48DF-A1FF-57A6ACBED514}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{8BE592FE-7527-4AE2-A072-3283C4F4783F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{32D90202-5BDB-4C67-899B-1B2890669B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32D90202-5BDB-4C67-899B-1B2890669B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32D90202-5BDB-4C67-899B-1B2890669B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B792E2F-F558-48DF-A1FF-57A6ACBED514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B792E2F-F558-48DF-A1FF-57A6ACBED514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B792E2F-F558-48DF-A1FF-57A6ACBED514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B792E2F-F558-48DF-A1FF-57A6ACBED514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BE592FE-7527-4AE2-A072-3283C4F4783F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BE592FE-7527-4AE2-A072-3283C4F4783F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BE592FE-7527-4AE2-A072-3283C4F4783F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BE592FE-7527-4AE2-A072-3283C4F4783F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
