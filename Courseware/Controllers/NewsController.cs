@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace Courseware.Controllers
 {
-    public class BooksController : Controller
+    public class NewsController : Controller
     {
         //
-        // GET: /Books/
+        // GET: /News/
 
         public ActionResult Index()
         {
@@ -23,9 +23,10 @@ namespace Courseware.Controllers
             }
 
 
-            return View();
+            return View("Site");
         }
-        public ActionResult Search()
+
+        public ActionResult Site()
         {
             object o = Session["user"];
             if (o != null)
@@ -39,35 +40,7 @@ namespace Courseware.Controllers
 
             return View();
         }
-        public ActionResult Name()
-        {
-            object o = Session["user"];
-            if (o != null)
-            {
-                ViewBag.Login = (string)o;
-                o = Session["img"];
-                string image = o != null ? (string)o : "user.png";
-                ViewBag.Image = image;
-            }
-
-
-            return View("SearchByBookName");
-        }
-        public ActionResult Department()
-        {
-            object o = Session["user"];
-            if (o != null)
-            {
-                ViewBag.Login = (string)o;
-                o = Session["img"];
-                string image = o != null ? (string)o : "user.png";
-                ViewBag.Image = image;
-            }
-
-
-            return View("SearchByDepartment");
-        }
-        public ActionResult ViewAll()
+        public ActionResult World()
         {
             object o = Session["user"];
             if (o != null)
@@ -83,6 +56,4 @@ namespace Courseware.Controllers
         }
 
     }
-
-    
 }

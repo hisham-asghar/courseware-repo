@@ -13,34 +13,114 @@ namespace Courseware.Controllers
 
         public ActionResult Index()
         {
+            object o = Session["user"];
+            if (o != null)
+            {
+                ViewBag.Login = (string)o;
+                o = Session["img"];
+                string image = o != null ? (string)o : "user.png";
+                ViewBag.Image = image;
+            }
+
+
             return View();
         }
         public ActionResult material()
         {
+            object o = Session["user"];
+            if (o != null)
+            {
+                ViewBag.Login = (string)o;
+                o = Session["img"];
+                string image = o != null ? (string)o : "user.png";
+                ViewBag.Image = image;
+            }
+
+
             return View();
         }
         public ActionResult books()
         {
+            object o = Session["user"];
+            if (o != null)
+            {
+                ViewBag.Login = (string)o;
+                o = Session["img"];
+                string image = o != null ? (string)o : "user.png";
+                ViewBag.Image = image;
+            }
+
+
             return View();
         }
         public ActionResult certificate()
         {
+            object o = Session["user"];
+            if (o != null)
+            {
+                ViewBag.Login = (string)o;
+                o = Session["img"];
+                string image = o != null ? (string)o : "user.png";
+                ViewBag.Image = image;
+            }
+
+
             return View();
         }
         public ActionResult Search()
         {
+            object o = Session["user"];
+            if (o != null)
+            {
+                ViewBag.Login = (string)o;
+                o = Session["img"];
+                string image = o != null ? (string)o : "user.png";
+                ViewBag.Image = image;
+            }
+
+
             return View();
         }
-        public ActionResult SearchByName()
+        public ActionResult Name()
         {
-            return View();
+            object o = Session["user"];
+            if (o != null)
+            {
+                ViewBag.Login = (string)o;
+                o = Session["img"];
+                string image = o != null ? (string)o : "user.png";
+                ViewBag.Image = image;
+            }
+
+
+            return View("SearchByName");
         }
-        public ActionResult SearchByDepartment()
+        public ActionResult Department()
         {
-            return View();
+            object o = Session["user"];
+            if (o != null)
+            {
+                ViewBag.Login = (string)o;
+                o = Session["img"];
+                string image = o != null ? (string)o : "user.png";
+                ViewBag.Image = image;
+            }
+
+
+            return View("SearchByDepartment");
         }
         public ActionResult ViewAll()
         {
+            object o = Session["user"];
+            if (o != null)
+            {
+                ViewBag.Login = (string)o;
+                o = Session["img"];
+                string image = o != null ? (string)o : "user.png";
+                ViewBag.Image = image;
+            }
+
+
             return View();
         }
 

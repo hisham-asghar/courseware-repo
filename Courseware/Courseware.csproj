@@ -139,6 +139,9 @@
     <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\ClassroomsController.cs" />
     <Compile Include="Controllers\courseController.cs" />
+    <Compile Include="Controllers\LecturesController.cs" />
+    <Compile Include="Controllers\MagzinesController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\StatisticsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\SampleController.cs" />
@@ -509,13 +512,20 @@
     <Content Include="Views\Collections\Books.cshtml" />
     <Content Include="Views\Collections\lectures.cshtml" />
     <Content Include="Views\Collections\NewCourses.cshtml" />
-    <Content Include="Views\Lectures\CourseNo.cshtml" />
+    <Content Include="Views\Lectures\Course.cshtml" />
     <Content Include="Views\Lectures\dept.cshtml" />
     <Content Include="Views\Lectures\topic.cshtml" />
     <Content Include="Views\Lectures\ViewAll.cshtml" />
     <Content Include="Views\User\toLogin.cshtml" />
     <Content Include="Views\User\toRegister.cshtml" />
     <Content Include="Views\User\Update.cshtml" />
+    <Content Include="Views\News\Site.cshtml" />
+    <Content Include="Views\News\World.cshtml" />
+    <Content Include="Views\Magzines\Search.cshtml" />
+    <Content Include="Views\Magzines\ViewAll.cshtml" />
+    <Content Include="Views\Classrooms\Teacher.cshtml" />
+    <Content Include="Views\Classrooms\Student.cshtml" />
+    <Content Include="Views\Classrooms\TA.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
