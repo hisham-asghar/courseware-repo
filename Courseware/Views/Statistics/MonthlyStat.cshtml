@@ -3,39 +3,25 @@
 }
 @section heading
 {
-    Monthly Stat
+    Monthly Stat : <p id="month"></p>
 
 }
-
+<script> 
+    $(document).ready(function () {
+        var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        $("#month").text(month[(new Date()).getMonth() - 1]).css("display","inline");
+    });
+    </script>
 
 <div class="col-md-8 col-sm-6 col-xs-12">
     <div class="x_panel">
         <div class="x_title">
-            <h2>User  Stat</h2>
-            <ul class="nav navbar-right panel_toolbox">
-                <li>
-                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="#">Settings 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Settings 2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="close-link"><i class="fa fa-close"></i></a>
-                </li>
-            </ul>
+            <h2>User Stat</h2>
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
             <iframe class="chartjs-hidden-iframe" style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;"></iframe>
-            <canvas id="lineChart" width="300" height="150"></canvas>
+            <canvas id="lineChart_user" width="300" height="150"></canvas>
         </div>
     </div>
 </div>
@@ -44,30 +30,11 @@
     <div class="x_panel">
         <div class="x_title">
             <h2>Books Stat</h2>
-            <ul class="nav navbar-right panel_toolbox">
-                <li>
-                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="#">Settings 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Settings 2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="close-link"><i class="fa fa-close"></i></a>
-                </li>
-            </ul>
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
             <iframe class="chartjs-hidden-iframe" style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;"></iframe>
-            <canvas id="lineChart" width="300" height="150"></canvas>
+            <canvas id="lineChart_books" width="300" height="150"></canvas>
         </div>
     </div>
 </div>
@@ -75,30 +42,73 @@
     <div class="x_panel">
         <div class="x_title">
             <h2>Courses Stat</h2>
-            <ul class="nav navbar-right panel_toolbox">
-                <li>
-                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="#">Settings 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Settings 2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="close-link"><i class="fa fa-close"></i></a>
-                </li>
-            </ul>
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
             <iframe class="chartjs-hidden-iframe" style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;"></iframe>
-            <canvas id="lineChart" width="300" height="150"></canvas>
+            <canvas id="lineChart_courses" width="300" height="150"></canvas>
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+        // Line chart
+        //var ctx = document.getElementById("lineChart");
+        var ctx = $("#lineChart_user").get();
+        var lineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["0", "5", "10", "15", "20", "25", "30"],
+                datasets: [{
+                    label: "Users",
+                    backgroundColor: "rgba(38, 185, 154, 0.31)",
+                    borderColor: "rgba(38, 185, 154, 0.7)",
+                    pointBorderColor: "rgba(38, 185, 154, 0.7)",
+                    pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(220,220,220,1)",
+                    pointBorderWidth: 1,
+                    data: [0, 74, 6, 39, 20, 85, 7]
+                }]
+            },
+        });
+        ctx = $("#lineChart_books").get();
+        lineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["0", "5", "10", "15", "20", "25", "30"],
+                datasets: [{
+                    label: "Books",
+                    backgroundColor: "rgba(3, 88, 106, 0.3)",
+                    borderColor: "rgba(3, 88, 106, 0.70)",
+                    pointBorderColor: "rgba(3, 88, 106, 0.70)",
+                    pointBackgroundColor: "rgba(3, 88, 106, 0.70)",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(151,187,205,1)",
+                    pointBorderWidth: 1,
+                    data: [0, 23, 66, 9, 99, 4, 2]
+                }]
+            },
+        });
+        ctx = $("#lineChart_courses").get();
+        lineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["0", "5", "10", "15", "20", "25", "30"],
+                datasets: [{
+                    label: "Courses",
+                    backgroundColor: "rgba(3, 18, 106, 0.3)",
+                    borderColor: "rgba(3, 88, 16, 0.70)",
+                    pointBorderColor: "rgba(3, 88, 106, 0.70)",
+                    pointBackgroundColor: "rgba(3, 88, 106, 0.70)",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(151,187,205,1)",
+                    pointBorderWidth: 1,
+                    data: [0, 223, 606, 94, 59, 14, 92]
+                }]
+            },
+        });
+
+
+    });
+</script>
