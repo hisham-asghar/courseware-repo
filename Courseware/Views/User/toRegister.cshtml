@@ -1,0 +1,107 @@
+﻿
+<div id="register" class="animate form">
+    <section class="login_content">
+        <form action="/User/Register" method="post">
+            <h1>Create Account</h1>
+            <div>
+                <label class="left">First Name</label>
+                <input type="text" class="form-control" name="firstName" placeholder="First Name" required="" pattern="^[a-zA-Z]{1,20}$" />
+                <span>@ViewBag.Fname</span>
+            </div>
+            <div>
+                <label class="left">Last Name</label>
+                <input type="text" class="form-control" name="lastName" placeholder="Last Name" required="" pattern="^[a-zA-Z]{1,20}$" />
+            </div>
+            <div>
+                <label class="left">Username</label>
+                <input type="text" class="form-control" name="username" placeholder="Username" required="" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{5,20}$" />
+            </div>
+            <div>
+                <label class="left">Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Password" required="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" />
+            </div>
+            <div>
+                <label class="left">Email</label>
+                <input type="email" class="form-control" name="email" placeholder="Email" required="" />
+            </div>
+            <div>
+                <label class="control-label left">
+                    Date Of Birth <span class="required">*</span>
+                </label>
+                <input id="birthday" name="dob" class="date-picker form-control col-md-7 col-xs-12" required="required" type="date" data-parsley-id="0523">
+                <ul class="parsley-errors-list" id="parsley-id-0523"></ul>
+            </div>
+            <div class="clearfix"></div><br />
+            <div>
+                <label class="left"> Account Type</label>
+                <div class="btn-group" data-toggle="buttons" id="type">
+                    <label class="btn btn-default active">
+                        <input type="radio" name="account" id="teacher" value="0"> Teacher
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="account" id="student" value="1"> Student
+                    </label>
+                </div>
+            </div>
+            <div class="clearfix"></div><br />
+            <div>
+                <label class="left"> Gender</label>&nbsp;&nbsp;&nbsp;
+                <div class="btn-group" data-toggle="buttons" id="gender">
+                    <label class="btn btn-default active">
+                        <input type="radio" name="gender" id="teacher" value="0"> Male
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="gender" id="student" value="1"> Female
+                    </label>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="separator"></div>
+            <div>
+                <input type="submit" class="btn btn-success submit" value="Submit" />
+                <input type="button" class="btn btn-default submit cancelBtn" value="Cancel" />
+            </div>
+            <div class="clearfix"></div>
+            <div class="separator">
+
+                <p class="change_link">
+                    Already a member ?
+                    <a href="#tologin" class="to_register"> Log in </a>
+                </p>
+                <div class="clearfix"></div>
+                <br />
+                <div>
+                    <h1><i class="fa fa-paw" style="font-size: 26px;"></i> OPEN COURSEWARE!</h1>
+
+                    <p>©2015 All Rights Reserved. Privacy and Terms</p>
+                </div>
+            </div>
+        </form>
+        
+        <!-- form -->
+    </section>
+    <!-- content -->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#type > label").each(function () {
+                $(this).click(function () {
+                    $("#type > label").removeClass("active");
+                    $(this).addClass("active");
+                });
+            });
+            $("#gender > label").each(function () {
+                $(this).click(function () {
+                    $("#type > label").removeClass("active");
+                    $(this).addClass("active");
+                });
+            });
+
+            $(".cancelBtn").each(function () {
+                $(this).click(function () {
+                    location.href = "/";
+                });
+            });
+        });
+    </script>
+</div>

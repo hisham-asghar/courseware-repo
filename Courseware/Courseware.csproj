@@ -221,6 +221,8 @@
     <Content Include="Content\css\progressbar\bootstrap-progressbar-3.3.0.css" />
     <Content Include="Content\css\select\select2.min.css" />
     <Content Include="Content\css\switchery\switchery.min.css" />
+    <Content Include="Content\data\picture.jpg" />
+    <Content Include="Content\data\user.png" />
     <Content Include="Content\fonts\css\font-awesome.css" />
     <Content Include="Content\fonts\css\font-awesome.min.css" />
     <Content Include="Content\fonts\fonts\fontawesome-webfont.svg" />
@@ -464,7 +466,9 @@
     <Content Include="Scripts\plugins\validator\validator.js" />
     <Content Include="Scripts\plugins\wizard\jquery.smartWizard.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -487,7 +491,6 @@
     <Content Include="Views\Classrooms\Class_Layout.cshtml" />
     <Content Include="Views\Classrooms\Class.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
-    <Content Include="Views\User\signup.cshtml" />
     <Content Include="Views\course\material.cshtml" />
     <Content Include="Views\course\books.cshtml" />
     <Content Include="Views\Classrooms\Reports.cshtml" />
@@ -503,12 +506,32 @@
     <Content Include="Views\Books\ViewAll.cshtml" />
     <Content Include="Views\Statistics\ContactUs.cshtml" />
     <Content Include="Views\Statistics\MonthlyStat.cshtml" />
+    <Content Include="Views\Collections\Books.cshtml" />
+    <Content Include="Views\Collections\lectures.cshtml" />
+    <Content Include="Views\Collections\NewCourses.cshtml" />
+    <Content Include="Views\Lectures\CourseNo.cshtml" />
+    <Content Include="Views\Lectures\dept.cshtml" />
+    <Content Include="Views\Lectures\topic.cshtml" />
+    <Content Include="Views\Lectures\ViewAll.cshtml" />
+    <Content Include="Views\User\toLogin.cshtml" />
+    <Content Include="Views\User\toRegister.cshtml" />
+    <Content Include="Views\User\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BAL\BAL.csproj">
+      <Project>{7b792e2f-f558-48df-a1ff-57a6acbed514}</Project>
+      <Name>BAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{b32617e1-63ef-47b5-84f0-a32de3f181f7}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

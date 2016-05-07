@@ -1,0 +1,172 @@
+﻿@{
+    ViewBag.Title = "Update";
+}
+@section heading{
+    <div class="title_left">
+        <h3>User Profile</h3>
+    </div>
+}
+@model Entities.User
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_content">
+
+                <form action="/User/UpdateProfile" method="post" enctype="multipart/form-data">
+                    <div class="col-md-3 col-sm-3 col-xs-12 profile_left">
+
+                        <div class="profile_img">
+
+                            <!-- end of image cropping -->
+                            <div id="crop-avatar">
+                                <!-- Current avatar -->
+                                <div class="avatar-view" title="" data-original-title="Change the avatar" aria-describedby="tooltip51108">
+                                    @if (Model.image == null || Model.image.Trim() == "")
+                                    {
+                                    <img src="~/Content/data/user.png" id="imgfile" alt="Avatar">
+                                    }
+                                    else
+                                    {
+                                    <img src="~/Content/data/@Model.image" id="imgfile" alt="Avatar">
+                                    }
+
+                                </div>
+                                <!-- end of image cropping -->
+
+                            </div>
+                            <br />
+                            <div class="fileUpload btn btn-primary">
+                                <span>Upload</span>
+                                <input id="file" name="pic" type="file" class="upload" />
+                            </div>
+                            <style>
+                                .fileUpload {
+                                    position: relative;
+                                    overflow: hidden;
+                                    margin: 10px;
+                                }
+
+                                    .fileUpload input.upload {
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
+                                        margin: 0;
+                                        padding: 0;
+                                        font-size: 20px;
+                                        cursor: pointer;
+                                        opacity: 0;
+                                        filter: alpha(opacity=0);
+                                    }
+                            </style>
+                            <script>
+                                $(document).ready(function () {
+                                    $("input#file").change(function (event) {
+                                        debugger;
+                                        var f = $(this);
+                                        x = f.val().substr(f.val().lastIndexOf("."));
+                                        if (!(x == ".jpg" || x == ".jpeg" || x == ".png")) {
+                                            f.val("");
+                                            $("img#imgfile").fadeIn("fast").attr('src', 'images/empty.png');
+                                            alert("Invalid Upload....");
+                                        } else {
+                                            var tmppath = URL.createObjectURL(event.target.files[0]);
+                                            $("img#imgfile").fadeIn("fast").attr('src', URL.createObjectURL(event.target.files[0]));
+
+                                        }
+                                    });
+                                });
+                            </script>
+
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <h1>Update Profile</h1>
+                        <div>
+                            <label class="left">First Name</label>
+                            <input type="text" class="form-control" name="firstName" placeholder="First Name" value="@Model.firstName" required="" pattern="^[a-zA-Z]{1,20}$" />
+                            <span>@ViewBag.Fname</span>
+                        </div>
+                        <div>
+                            <label class="left">Last Name</label>
+                            <input type="text" class="form-control" name="lastName" placeholder="Last Name" value="@Model.lastName" required="" pattern="^[a-zA-Z]{1,20}$" />
+                        </div>
+                        <div>
+                            <label class="left">Username</label>
+                            <input type="text" class="form-control" name="username" disabled placeholder="Username" value="@Model.username" required="" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{5,20}$" />
+                        </div>
+                        <div>
+                            <label class="left">Password</label>
+                            <input type="password" class="form-control" name="password" placeholder="Password" value="@Model.password" required="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" />
+                        </div>
+                        <div>
+                            <label class="left">Email</label>
+                            <input type="email" class="form-control" name="email" placeholder="Email" required="" value="@Model.email" />
+                        </div>
+                        <div>
+                            <label class="control-label left">
+                                Date Of Birth <span class="required">*</span>
+                            </label>
+                            <input id="birthday" name="dob" class="date-picker form-control col-md-7 col-xs-12" value='@Model.dob.ToString("yyyy-MM-dd")' required="required" type="date" data-parsley-id="0523">
+                            <ul class="parsley-errors-list" id="parsley-id-0523"></ul>
+                        </div>
+                        <div class="clearfix"></div><br />
+                        <div>
+                            <label class="left"> Gender</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="btn-group center" data-toggle="buttons" id="gender">
+                                <label class="btn btn-default active">
+                                    <input type="radio" name="gender" id="teacher" value="0"> Male
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio" name="gender" id="student" value="1"> Female
+                                </label>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="separator"></div>
+                        <div class="alignright">
+                            <input type="submit" class="btn btn-success submit" value="Update" />
+                            <input type="button" class="btn btn-default submit cancelBtn" value="Cancel" />
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="separator">
+
+                        </div>
+
+                    </div>
+
+                </form>
+                <script>
+                    $(document).ready(function () {
+                        $("#type > label").each(function () {
+                            var x = @Model.account +1;
+                            $("#type > label").removeClass("active");
+                            $("#type > label:nth-child(" + x + ")").addClass("active");
+                            x = @Model.gender +1;
+                            $("#gender > label").removeClass("active");
+                            $("#gender > label:nth-child(" + x + ")").addClass("active");
+                            $(this).click(function () {
+                                $("#type > label").removeClass("active");
+                                $(this).addClass("active");
+                            });
+                        });
+                        $("#gender > label").each(function () {
+                            $(this).click(function () {
+                                $("#type > label").removeClass("active");
+                                $(this).addClass("active");
+                            });
+                        });
+
+                        $(".cancelBtn").each(function () {
+                            $(this).click(function () {
+                                location.href = "/";
+                            });
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BAL;
+using System.IO;
 
 namespace Courseware.Controllers
 {
@@ -15,12 +18,52 @@ namespace Courseware.Controllers
         {
             return View("Login");
         }
+        
+        public ActionResult Update()
+        {
+            if (Session["user"] != null)
+            {
+                String uname = (string)Session["user"];
+                UserBAL bal = new UserBAL();
+                User dto = bal.getUser(uname);
+                return View(dto);
+            }
+            else
+            {
+                return Redirect("~/");
+            }
+        }
+        [HttpPost]
+        public ActionResult UpdateProfile(HttpPostedFileBase pic,User user)
+        {
+            if (Session["user"] != null)
+            {
+                if (pic != null && pic.ContentLength > 0)
+                {
+                    var fileName = Guid.NewGuid().ToString() + ".jpg";
+                    string path = Path.Combine(Server.MapPath("~/Content/data"), fileName);
+                    pic.SaveAs(path);
+                    user.image = fileName;
+                }
+                else
+                {
+                    user.image = "";
+                }
+                String uname = (string)Session["user"];
+                user.username = uname;
+                UserBAL bal = new UserBAL();
+                User dto = bal.updateUser(user);
+                Session["img"] = user.image;
+            } 
+            return Redirect("~/");
+        }
 
         public ActionResult logout()
         {
             if (Session["user"] != null)
             {
                 Session["user"] = null;
+                Session["img"] = null;
             }
             return Redirect("~/");
         }
@@ -30,9 +73,14 @@ namespace Courseware.Controllers
         {
             var uname = Request.Form["username"];
             var pass = Request.Form["password"];
-            if (uname == "Hisham1234" && pass == "Abc12345")
+            User dto = new User();
+            dto.username = uname;
+            dto.password = pass;
+            UserBAL bal = new UserBAL();
+            if (bal.verifyLogin(dto))
             {
                 Session["user"] = uname;
+                Session["img"] = dto.image;
                 return Redirect("~/");
             }
             else
@@ -43,20 +91,21 @@ namespace Courseware.Controllers
         }
 
         [HttpPost]
-        public ActionResult Register()
+        public ActionResult Register(User dto)
         {
-            var uname = Request.Form["username"];
-            var pass = Request.Form["password"];
-            if (uname == "Hisham1234" && pass == "Abc12345")
+            UserBAL bal = new UserBAL();
+            int i = bal.saveUser(dto);
+            if (i > 0)
             {
-                Session["user"] = uname;
+                Session["user"] = dto.username;
                 return Redirect("~/");
             }
             else
             {
                 ViewBag.error = "Invalid username or Password";
-                return Redirect("~/User#toregitser");
+                return Redirect("~/User#toregister");
             }
         }
+
     }
 }
