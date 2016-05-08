@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace Courseware.Controllers
 {
-    public class courseController : Controller
+    public class CourseController : Controller
     {
         //
         // GET: /course/
@@ -23,9 +19,9 @@ namespace Courseware.Controllers
             }
 
 
-            return View();
+            return View("ViewAll");
         }
-        public ActionResult material()
+        public ActionResult Material()
         {
             object o = Session["user"];
             if (o != null)
@@ -39,7 +35,7 @@ namespace Courseware.Controllers
 
             return View();
         }
-        public ActionResult books()
+        public ActionResult Books()
         {
             object o = Session["user"];
             if (o != null)
@@ -53,7 +49,7 @@ namespace Courseware.Controllers
 
             return View();
         }
-        public ActionResult certificate()
+        public ActionResult Certificate()
         {
             object o = Session["user"];
             if (o != null)

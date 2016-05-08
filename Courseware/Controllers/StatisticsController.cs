@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace Courseware.Controllers
 {
@@ -23,7 +19,7 @@ namespace Courseware.Controllers
             }
 
 
-            return View();
+            return View("MonthlyStat");
         }
         public ActionResult ContactUs()
         {

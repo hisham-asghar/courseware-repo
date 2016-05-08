@@ -1,7 +1,5 @@
 ﻿using Entities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BAL;
@@ -52,13 +50,13 @@ namespace Courseware.Controllers
                 String uname = (string)Session["user"];
                 user.username = uname;
                 UserBAL bal = new UserBAL();
-                User dto = bal.updateUser(user);
+                bal.updateUser(user);
                 Session["img"] = user.image;
             } 
             return Redirect("~/");
         }
-
-        public ActionResult logout()
+        [ActionName("logout")]
+        public ActionResult Logout()
         {
             if (Session["user"] != null)
             {

@@ -1,0 +1,101 @@
+﻿@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@section heading
+{
+    @RenderBody()
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/css/switchery/switchery.min.css" />
+<script src="~/Scripts/plugins/switchery/switchery.min.js"></script>
+<div class="">
+    <div class="title_right">
+        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-left top_search">
+            @RenderSection("checkBox",true)
+            <div class="input-group">
+                <input type="text" id="search_bar" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="row" id="data">
+    <div class="col-md-12 block___">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Books</h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-md-55">
+                        <div class="thumbnail">
+                            <div class="image view view-first">
+                                <img alt="image" style="width: 100%; display: block;">
+                            </div>
+                            <div class="caption">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        var dataBlock = $("div#data.row");
+        var nblock = dataBlock.find(".block___");
+        nblock.remove();
+        var temp = nblock.find(".x_content .row .col-md-55");
+        temp.remove();
+
+        $("#search_bar").keyup(function () {
+            @RenderSection("ajaxSendData",true)
+            console.log(data);
+            var settings = {
+                type: "POST",
+                dataType: "json",
+                @RenderSection("ajaxUrl",true)
+                data: data,
+                success: function (response) {
+                    console.log(response);
+                    dataBlock.html("");
+                    for (var z in response) {
+                        var ndata = response[z].data;
+                        var ablock = nblock.clone();
+                        var blockData = ablock.find(".x_content .row");
+                        for (var x in ndata) {
+                            if (ndata.hasOwnProperty(x)) {
+                                var item = temp.clone();
+                                if (ndata[x].image == null || ndata[x].image.trim() == "") {
+
+                                    item.find("img").attr("src", '@RenderSection("defaultItemImage",true)');
+                                } else {
+                                    item.find("img").attr("src", '@Url.Content("~/Content/images/")' + ndata[x].image);
+                                }
+                                item.find(".caption p").text(ndata[x].name);
+                                blockData.append(item);
+                            }
+                        }
+                        ablock.find(".x_title h2").text(response[z].name);
+                        dataBlock.append(ablock);
+                    }
+                },
+                error: function (err, type, httpStatus) {
+                    console.log(err + "--" + type + "--" + httpStatus);
+                }
+            };
+            $.ajax(settings);
+
+        });
+    });
+</script>

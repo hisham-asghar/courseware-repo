@@ -138,7 +138,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\ClassroomsController.cs" />
-    <Compile Include="Controllers\courseController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\LecturesController.cs" />
     <Compile Include="Controllers\MagzinesController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
@@ -494,15 +494,15 @@
     <Content Include="Views\Classrooms\Class_Layout.cshtml" />
     <Content Include="Views\Classrooms\Class.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
-    <Content Include="Views\course\material.cshtml" />
-    <Content Include="Views\course\books.cshtml" />
+    <Content Include="Views\Course\material.cshtml" />
+    <Content Include="Views\Course\books.cshtml" />
     <Content Include="Views\Classrooms\Reports.cshtml" />
-    <Content Include="Views\course\certificate.cshtml" />
+    <Content Include="Views\Course\certificate.cshtml" />
     <Content Include="Views\Classrooms\Feedback.cshtml" />
-    <Content Include="Views\course\Search.cshtml" />
-    <Content Include="Views\course\SearchByName.cshtml" />
-    <Content Include="Views\course\SearchByDepartment.cshtml" />
-    <Content Include="Views\course\ViewAll.cshtml" />
+    <Content Include="Views\Course\Search.cshtml" />
+    <Content Include="Views\Course\SearchByName.cshtml" />
+    <Content Include="Views\Course\SearchByDepartment.cshtml" />
+    <Content Include="Views\Course\ViewAll.cshtml" />
     <Content Include="Views\Books\Search.cshtml" />
     <Content Include="Views\Books\SearchByBookName.cshtml" />
     <Content Include="Views\Books\SearchByDepartment.cshtml" />
@@ -526,6 +526,7 @@
     <Content Include="Views\Classrooms\Teacher.cshtml" />
     <Content Include="Views\Classrooms\Student.cshtml" />
     <Content Include="Views\Classrooms\TA.cshtml" />
+    <Content Include="Views\Layout\AjaxSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

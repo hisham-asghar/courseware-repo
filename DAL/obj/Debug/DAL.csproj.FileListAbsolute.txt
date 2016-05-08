@@ -1,0 +1,13 @@
+D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\DAL.dll
+D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\DAL.pdb
+D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\Entities.dll
+D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\EntityFramework.dll
+D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\Utlity.dll
+D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\Entities.pdb
+D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\Utlity.pdb
+D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\EntityFramework.xml
+D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\obj\Debug\DAL.dll
+D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\obj\Debug\DAL.pdb

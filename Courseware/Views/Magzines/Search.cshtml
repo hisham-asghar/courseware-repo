@@ -1,6 +1,19 @@
 ﻿@{
-    ViewBag.Title = "Search";
+    Layout = "~/Views/Layout/AjaxSearch.cshtml";
 }
-@section heading{
-<h2>Search</h2>
+@section ajaxUrl
+{
+    url : "/Magzines/GetJsonData",
+}
+@section checkBox{
+}
+@section ajaxSendData
+{
+    var data = {
+    str: $("#search_bar").val()
     }
+}
+@section defaultItemImage
+{@Url.Content("~/Content/data/book.png")}
+
+Magzines

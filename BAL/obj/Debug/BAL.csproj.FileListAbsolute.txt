@@ -1,0 +1,13 @@
+D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\BAL.dll
+D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\BAL.pdb
+D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\DAL.dll
+D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\Entities.dll
+D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\Utlity.dll
+D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\EntityFramework.dll
+D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\DAL.pdb
+D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\Entities.pdb
+D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\Utlity.pdb
+D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\EntityFramework.xml
+D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\obj\Debug\BAL.csprojResolveAssemblyReference.cache
+D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\obj\Debug\BAL.dll
+D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\obj\Debug\BAL.pdb
