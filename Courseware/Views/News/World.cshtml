@@ -3,5 +3,63 @@
 }
 @section heading{
 
-    <h2>Wrold</h2>
+    <h2>News</h2>
 }
+
+<div id="news_" style="display: none;">
+    <div class="row">
+        <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count ">
+            <div class="right">
+                <div class="count">
+                    <div class="image view view-first">
+                        <img id="image" style="width: 100%; display: block; margin-bottom: 3%;" src="/Content/images/4.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right" style="margin-left: 5%; width: 85%;">
+            <div class="count_top" style="font-size: 18px;">
+                <a id="link">
+                    <i class="green" id="title">
+                        Lyari: 13 injured in Singo Lane cracker attack, culprit manages to escape
+                    </i>
+                </a>
+            </div>
+            <div class="count_bottom" style="margin-left: 16%; margin-top: 1%;" id="text">
+                KARACHI (Dunya News) - Cracker attack in Singo Lane Lyari on Sunday has left 13 injured while according to the police the incident took place near Uzair Baloch\u0026#39;s house but it was not the prime target, reported Dunya News.
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        var news = $("#news_");
+        var row = $("#news_ .row").clone();
+        $("#news_ .row").remove();
+        var settings = {
+            type: "POST",
+            dataType: "json",
+            url : '@Url.Content("~/News/GetJsonData")',
+            success: function (data) {
+                console.log(data);
+          //      debugger;
+                for (var z in data) {
+                    debugger;
+                    var item = row.clone();
+                    item.find("#text").text(data[z].Text);
+                    item.find("#title").text(data[z].Title);
+                    item.find("#link").attr("href",data[z].Link);
+                    item.find("#image").attr("src",data[z].Image);
+                    news.append(item);
+                    news.append("<hr>");
+                }
+                news.css("display", "");
+            },
+            error: function (err, type, httpStatus) {
+                console.log(err + "--" + type + "--" + httpStatus);
+            }
+        };
+        $.ajax(settings);
+
+    });
+</script>

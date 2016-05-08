@@ -5,6 +5,5 @@ D:\VS Projects\ead_project_courseware\ead_project_courseware\Entities\bin\Debug\
 D:\VS Projects\ead_project_courseware\ead_project_courseware\Entities\bin\Debug\EntityFramework.SqlServer.dll
 D:\VS Projects\ead_project_courseware\ead_project_courseware\Entities\bin\Debug\EntityFramework.xml
 D:\VS Projects\ead_project_courseware\ead_project_courseware\Entities\bin\Debug\EntityFramework.SqlServer.xml
-D:\VS Projects\ead_project_courseware\ead_project_courseware\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
 D:\VS Projects\ead_project_courseware\ead_project_courseware\Entities\obj\Debug\Entities.dll
 D:\VS Projects\ead_project_courseware\ead_project_courseware\Entities\obj\Debug\Entities.pdb
