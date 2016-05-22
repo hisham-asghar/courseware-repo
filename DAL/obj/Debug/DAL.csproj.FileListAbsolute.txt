@@ -1,13 +1,14 @@
-D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\DAL.dll
-D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\DAL.pdb
-D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\Entities.dll
-D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\EntityFramework.dll
-D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\EntityFramework.SqlServer.dll
-D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\Utlity.dll
-D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\Entities.pdb
-D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\Utlity.pdb
-D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\EntityFramework.xml
-D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\bin\Debug\EntityFramework.SqlServer.xml
-D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\obj\Debug\DAL.dll
-D:\VS Projects\ead_project_courseware\ead_project_courseware\DAL\obj\Debug\DAL.pdb
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\DAL\bin\Debug\DAL.dll.config
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\DAL\bin\Debug\DAL.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\DAL\bin\Debug\DAL.pdb
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\DAL\bin\Debug\Entities.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\DAL\bin\Debug\EntityFramework.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\DAL\bin\Debug\Utlity.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\DAL\bin\Debug\Entities.pdb
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\DAL\bin\Debug\Utlity.pdb
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\DAL\bin\Debug\EntityFramework.xml
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\DAL\obj\Debug\DAL.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\DAL\obj\Debug\DAL.pdb

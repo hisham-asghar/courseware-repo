@@ -10,6 +10,7 @@ namespace Utility
             this.Configuration.ValidateOnSaveEnabled = false;
   //          this.Configuration.LazyLoadingEnabled = false;
         }
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
 
         public virtual DbSet<Author> Authors { get; set; }
         public virtual DbSet<Book> Books { get; set; }
@@ -18,6 +19,7 @@ namespace Utility
         public virtual DbSet<Course_Material> Course_Material { get; set; }
         public virtual DbSet<Cours> Courses { get; set; }
         public virtual DbSet<File> Files { get; set; }
+        public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Magzine> Magzines { get; set; }
         public virtual DbSet<Magzines_Category> Magzines_Category { get; set; }
         public virtual DbSet<News> News { get; set; }

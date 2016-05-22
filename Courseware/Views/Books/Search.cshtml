@@ -28,8 +28,39 @@
         author: authorCheck
     }
 }
-@section defaultItemImage
-{@Url.Content("~/Content/data/book.png")}
 
+@section ajaxRet{
+console.log(response);
+                    dataBlock.html("");
+                    for (var z in response) {
+                //        debugger;
+                        var ndata = response[z];
+                        var ablock = nblock.clone();
+                        var blockData = ablock.find(".x_content .row");
+                        for (var x in ndata) {
+                            if (ndata.hasOwnProperty(x)) {
+                                var item = temp.clone();
+                                if (ndata[x].image == null || ndata[x].image.trim() == "") {
 
+                                    item.find("img").attr("src", '@Url.Content("~/Content/data/book.png")');
+                                    } else {
+                                    item.find("img").attr("src", '@Url.Content("~/Content/data/Books/")' + ndata[x].image);
+                                    }          
+                                    if(z == "0")
+                                        item.find(".caption p").html(ndata[x].name + "<br />Author: " + ndata[x].author );                                    
+                                    else                                        
+                                        item.find(".caption p").html("Author: " + ndata[x].author + "<br />Name: " + ndata[x].name);                                    
+                                    
+                                    item.find(".caption a").attr("href",ndata[x].file);
+                                    blockData.append(item);
+                                    }
+                                    }
+          //      debugger;
+                                if(z == "0")
+                                    ablock.find(".x_title h2").text("Books");
+                                else
+    ablock.find(".x_title h2").text("Authors");
+                                    dataBlock.append(ablock);
+                                    }
+}
 Books

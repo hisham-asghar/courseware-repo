@@ -10,6 +10,7 @@ namespace DAL
         public bool verifyLogin(User dto)
         {
             Database ctx = new Database();
+
             var user = ctx.Users.Where(x => x.username == dto.username && x.password == dto.password).FirstOrDefault();
             if (user != null)
             {
@@ -34,7 +35,7 @@ namespace DAL
                 ctx.SaveChanges();
                 return 1;
             }
-            catch (Exception e)
+            catch (Exception )
             {
                 return 0;
             }

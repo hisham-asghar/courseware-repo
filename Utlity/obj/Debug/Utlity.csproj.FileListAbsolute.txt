@@ -9,3 +9,15 @@ D:\VS Projects\ead_project_courseware\ead_project_courseware\Utlity\bin\Debug\En
 D:\VS Projects\ead_project_courseware\ead_project_courseware\Utlity\obj\Debug\Utlity.csprojResolveAssemblyReference.cache
 D:\VS Projects\ead_project_courseware\ead_project_courseware\Utlity\obj\Debug\Utlity.dll
 D:\VS Projects\ead_project_courseware\ead_project_courseware\Utlity\obj\Debug\Utlity.pdb
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\Utlity\bin\Debug\Utlity.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\Utlity\bin\Debug\Utlity.pdb
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\Utlity\bin\Debug\Entities.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\Utlity\bin\Debug\Entities.pdb
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\Utlity\bin\Debug\EntityFramework.xml
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\Utlity\bin\Debug\EntityFramework.SqlServer.xml
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\Utlity\obj\Debug\Utlity.csprojResolveAssemblyReference.cache
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\Utlity\obj\Debug\Utlity.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\Utlity\obj\Debug\Utlity.pdb
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\Utlity\bin\Debug\Utlity.dll.config
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\Utlity\bin\Debug\EntityFramework.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\Utlity\bin\Debug\EntityFramework.SqlServer.dll

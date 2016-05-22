@@ -39,7 +39,7 @@
                                 <img alt="image" style="width: 100%; display: block;">
                             </div>
                             <div class="caption">
-                                <p></p>
+                                <a id="link_" target="_blank"><p></p></a>
                             </div>
                         </div>
                     </div>
@@ -67,28 +67,7 @@
                 @RenderSection("ajaxUrl",true)
                 data: data,
                 success: function (response) {
-                    console.log(response);
-                    dataBlock.html("");
-                    for (var z in response) {
-                        var ndata = response[z].data;
-                        var ablock = nblock.clone();
-                        var blockData = ablock.find(".x_content .row");
-                        for (var x in ndata) {
-                            if (ndata.hasOwnProperty(x)) {
-                                var item = temp.clone();
-                                if (ndata[x].image == null || ndata[x].image.trim() == "") {
-
-                                    item.find("img").attr("src", '@RenderSection("defaultItemImage",true)');
-                                } else {
-                                    item.find("img").attr("src", '@Url.Content("~/Content/images/")' + ndata[x].image);
-                                }
-                                item.find(".caption p").text(ndata[x].name);
-                                blockData.append(item);
-                            }
-                        }
-                        ablock.find(".x_title h2").text(response[z].name);
-                        dataBlock.append(ablock);
-                    }
+                    @RenderSection("ajaxRet",true)
                 },
                 error: function (err, type, httpStatus) {
                     console.log(err + "--" + type + "--" + httpStatus);

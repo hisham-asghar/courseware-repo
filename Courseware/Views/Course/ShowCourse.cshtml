@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "ShowCourse";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@model Entities.CourseDTO
+@section heading{
+    @Model.name
+}
+<div class="x_content">
+    <div class="col-md-4 col-sm-7 col-xs-12">
+        <div class="product-image">
+            <img src='@Url.Content("/Content/data/")@Model.image' alt="...">
+        </div>
+    </div>
+
+    <div class="col-md-8 col-sm-5 col-xs-12" style="border:0px solid #e5e5e5;">
+        <h3 class="prod_title">@Model.name</h3>
+        <p><h2 style="display:inline;font-weight:bold;">Department: </h2> <a href="/Course/Department/@Model.dept_id">@Model.dept</a></p>
+        <br>
+        <p><h2 style="display:inline;font-weight:bold;">Description: </h2>
+            <div id="descD" style="display:none;">@Model.desc</div>
+            <span id="desc1">@Model.desc</span>
+            <span id="descM" style="display:none;">@Model.desc</span>
+        </p>
+        <br>
+        <div class="">
+            <button type="button" class="btn btn-success btn-lg">Read</button>
+            <button type="button" class="btn btn-primary btn-lg">Download Course Material</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var div = $("div#descD").text();
+        $("#desc1").html(div.substring(0, 500));
+        $("#descM").html(div.substring(500));
+        $("div#descD").remove();
+        var a = $("<a id='seemore'> ...... See More </a>");
+        $("#desc1").append(a);
+        a.click(function () {
+            a.remove();
+            var div = $("div#desc1").text();
+            $("#descM").css("display", "");
+        })
+    });
+</script>

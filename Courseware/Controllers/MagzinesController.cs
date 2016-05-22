@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BAL;
+using Entities;
+using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
@@ -8,7 +10,7 @@ namespace Courseware.Controllers
     {
         //
         // GET: /Magzines/
-
+        
         public ActionResult Index()
         {
             object o = Session["user"];
@@ -20,7 +22,7 @@ namespace Courseware.Controllers
                 ViewBag.Image = image;
             }
 
-
+            
             return View("ViewAll");
         }
 
@@ -52,6 +54,7 @@ namespace Courseware.Controllers
             response.Add(obj);
             return Json(response, JsonRequestBehavior.AllowGet);
         }
+        [HttpGet]
         public ActionResult Search()
         {
             object o = Session["user"];
@@ -66,6 +69,25 @@ namespace Courseware.Controllers
 
             return View();
         }
+        [HttpPost]
+        [ActionName("Search")]
+        public ActionResult Search2()
+        {
+            object o = Session["user"];
+            if (o != null)
+            {
+                ViewBag.Login = (string)o;
+                o = Session["img"];
+                string image = o != null ? (string)o : "user.png";
+                ViewBag.Image = image;
+            }
+            string sh = Request.Form["textBox"];
+            MagazineBAL bal = new MagazineBAL();
+            var obj = bal.Search(sh);
+            return View("Search", obj);
+
+        }
+        [HttpGet]
         public ActionResult ViewAll()
         {
             object o = Session["user"];
@@ -76,9 +98,10 @@ namespace Courseware.Controllers
                 string image = o != null ? (string)o : "user.png";
                 ViewBag.Image = image;
             }
+            MagazineBAL bal = new MagazineBAL();
+            List<Magzine> m = bal.returnMagazines();
 
-
-            return View();
+            return View("ViewALL",m);
         }
 
     }

@@ -5,7 +5,11 @@
 
     <h2>News</h2>
 }
-
+<div id="spinner">
+    <a href="#spinner">
+        <i class="fa fa-spinner fa-spin" style="font-size: 190px;margin-left: 42%;margin-top: 11%;margin-bottom: 12%;"></i>
+    </a>
+</div>
 <div id="news_" style="display: none;">
     <div class="row">
         <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count ">
@@ -44,15 +48,16 @@
                 console.log(data);
           //      debugger;
                 for (var z in data) {
-                    debugger;
+               //     debugger;
                     var item = row.clone();
-                    item.find("#text").text(data[z].Text);
-                    item.find("#title").text(data[z].Title);
+                    item.find("#text").html(data[z].Text);
+                    item.find("#title").html(data[z].Title);
                     item.find("#link").attr("href",data[z].Link);
                     item.find("#image").attr("src",data[z].Image);
                     news.append(item);
                     news.append("<hr>");
                 }
+                $("#spinner").remove();
                 news.css("display", "");
             },
             error: function (err, type, httpStatus) {

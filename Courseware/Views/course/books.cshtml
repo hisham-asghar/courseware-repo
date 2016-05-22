@@ -2,8 +2,24 @@
     ViewBag.Title = "books";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>books</h2>
+@model Entities.BookDTO
 @section heading{
-    Course Books
+    @Model.name
 }
+<div class="x_content">
+    <div class="col-md-7 col-sm-7 col-xs-12">
+        <div class="product-image">
+            <img src="~/Content/data/picture.jpg" alt="...">
+        </div>
+    </div>
+
+    <div class="col-md-5 col-sm-5 col-xs-12" style="border:0px solid #e5e5e5;">
+        <h3 class="prod_title">@Model.name</h3>
+        <p>Author: @Model.author</p>
+        <br>
+        <div class="">
+            <button type="button" class="btn btn-success btn-lg">Read</button>
+            <button type="button" class="btn btn-primary btn-lg">Download</button>
+        </div>
+    </div>
+</div>

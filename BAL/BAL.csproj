@@ -39,6 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BooksBAL.cs" />
+    <Compile Include="CoursesBAL.cs" />
+    <Compile Include="LectureBAL.cs" />
+    <Compile Include="MagazineBAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserBAL.cs" />
   </ItemGroup>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BAL;
+using Entities;
+using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
@@ -30,50 +32,17 @@ namespace Courseware.Controllers
             bool name = bool.Parse(Request["name"]);
             bool author = bool.Parse(Request["author"]);
             var response = new List<object>();
+
             if (name)
             {
-                var data = new List<object>();
-                for (int i = 0; i < 10 && str != null && str.Trim() != ""; i++)
-                {
-                    string ss = Guid.NewGuid().ToString();
-                    if (ss.Contains(str))
-                    {
-                        object o = new
-                        {
-                            name = ss,
-                            image = "img1.jpg"
-                        };
-
-                        data.Add(o);
-                    }
-                }
-                var obj = new
-                {
-                    name = "By Name", data
-                };
+                BooksBAL bal = new BooksBAL();
+                var obj = bal.searchByName(str);
                 response.Add(obj);
             } 
             if (author)
             {
-                var data = new List<object>();
-                for (int i = 0; i < 10 && str != null && str.Trim() != ""; i++)
-                {
-                    string ss = Guid.NewGuid().ToString();
-                    if (ss.Contains(str))
-                    {
-                        object o = new
-                        {
-                            name = ss,
-                            image = "img1.jpg"
-                        };
-
-                        data.Add(o);
-                    }
-                }
-                var obj = new
-                {
-                    name = "By Author", data
-                };
+                BooksBAL bal = new BooksBAL();
+                var obj = bal.searchByAuthor(str);
                 response.Add(obj);
             }
 
@@ -105,11 +74,14 @@ namespace Courseware.Controllers
                 string image = o != null ? (string)o : "user.png";
                 ViewBag.Image = image;
             }
+            BooksBAL bal = new BooksBAL();
+            List<Book> b;
+            b = bal.searchAll(); 
 
 
-            return View("SearchByBookName");
+            return View("SearchByBookName",b);
         }
-        public ActionResult Department()
+        public ActionResult Subjects()
         {
             object o = Session["user"];
             if (o != null)
@@ -120,8 +92,14 @@ namespace Courseware.Controllers
                 ViewBag.Image = image;
             }
 
-
-            return View("SearchByDepartment");
+            if (Request.Url.Segments.Length == 4)
+            {
+                string s = Request.Url.Segments[3];
+                ViewBag.Sub = s;
+            }
+            BooksBAL bal = new BooksBAL();
+            List<DepartmentDTO> list = bal.searchDepartment();
+            return View("SearchByDepartment", list);
         }
         public ActionResult ViewAll()
         {
@@ -134,8 +112,29 @@ namespace Courseware.Controllers
                 ViewBag.Image = image;
             }
 
-
+            BooksBAL bal = new BooksBAL();
+            List<Book> b;
+            string s = Request.Url.Segments[3];
+           // b = bal.ShowBook();
             return View();
+        }
+        public ActionResult id()
+        {
+
+            object o = Session["user"];
+            if (o != null)
+            {
+                ViewBag.Login = (string)o;
+                o = Session["img"];
+                string image = o != null ? (string)o : "user.png";
+                ViewBag.Image = image;
+            }
+
+            BooksBAL bal = new BooksBAL();
+            string s = Request.Url.Segments[3];
+            BookDTO dto = bal.ShowBook(s);
+            return View("ShowBook",dto);
+        
         }
 
     }

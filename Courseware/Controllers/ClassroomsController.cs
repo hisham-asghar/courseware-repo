@@ -63,7 +63,8 @@ namespace Courseware.Controllers
 
             return View();
         }
-        public ActionResult TA()
+        [ActionName("TA")]
+        public ActionResult Ta()
         {
             object o = Session["user"];
             if (o != null)
@@ -75,7 +76,7 @@ namespace Courseware.Controllers
             }
 
 
-            return View();
+            return View("Class");
         }
         public ActionResult Student()
         {

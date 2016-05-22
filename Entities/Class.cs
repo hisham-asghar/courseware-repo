@@ -1,6 +1,10 @@
 namespace Entities
 {
+    using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
     public partial class Class
     {
@@ -10,11 +14,9 @@ namespace Entities
         public int course_id { get; set; }
 
         [Required]
-        [StringLength(5000)]
         public string description { get; set; }
 
         [Required]
-        [StringLength(5000)]
         public string courseOutline { get; set; }
 
         [Required]

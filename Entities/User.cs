@@ -1,8 +1,10 @@
 namespace Entities
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
     [Table("User")]
     public partial class User
@@ -36,7 +38,6 @@ namespace Entities
 
         public int account { get; set; }
 
-        [System.ComponentModel.DefaultValue(typeof(DateTime),"")]
         public DateTime onCreated { get; set; }
 
         public int isActive { get; set; }

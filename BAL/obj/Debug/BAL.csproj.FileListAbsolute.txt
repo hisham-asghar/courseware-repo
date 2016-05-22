@@ -1,13 +1,13 @@
-D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\BAL.dll
-D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\BAL.pdb
-D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\DAL.dll
-D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\Entities.dll
-D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\Utlity.dll
-D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\EntityFramework.dll
-D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\DAL.pdb
-D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\Entities.pdb
-D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\Utlity.pdb
-D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\bin\Debug\EntityFramework.xml
-D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\obj\Debug\BAL.csprojResolveAssemblyReference.cache
-D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\obj\Debug\BAL.dll
-D:\VS Projects\ead_project_courseware\ead_project_courseware\BAL\obj\Debug\BAL.pdb
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\BAL\obj\Debug\BAL.csprojResolveAssemblyReference.cache
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\BAL\bin\Debug\BAL.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\BAL\bin\Debug\BAL.pdb
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\BAL\bin\Debug\DAL.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\BAL\bin\Debug\Entities.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\BAL\bin\Debug\Utlity.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\BAL\bin\Debug\EntityFramework.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\BAL\bin\Debug\DAL.pdb
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\BAL\bin\Debug\Entities.pdb
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\BAL\bin\Debug\Utlity.pdb
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\BAL\bin\Debug\EntityFramework.xml
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\BAL\obj\Debug\BAL.dll
+D:\Hisham\Projects\VS Projects\VS Projects\ead_project_courseware\ead_project_courseware - Copy (2)\BAL\obj\Debug\BAL.pdb

@@ -1,9 +1,7 @@
 ﻿using Courseware.Models;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using System;
-using System.Linq;
-using Fizzler.Systems.HtmlAgilityPack;
+using System.Web.Providers.Entities;
 
 namespace Courseware.Controllers
 {
@@ -61,7 +59,8 @@ namespace Courseware.Controllers
 
        //     url = Server.MapPath("~/Content/data/SamplePage/GoogleNews.html");
             var list = News.GetNewsList(url);
-            var alist = new List<News>();
+            List<News> alist = null;
+            alist = new List<News>();
             News obj = new News();
             obj.Title = "Lyari: 13 injured in Singo Lane cracker attack, culprit manages to escape";
             obj.Text =

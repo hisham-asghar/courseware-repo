@@ -34,11 +34,11 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -54,10 +54,16 @@
   <ItemGroup>
     <Compile Include="Author.cs" />
     <Compile Include="Book.cs" />
+    <Compile Include="BookDTO.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Class.cs" />
     <Compile Include="Cours.cs" />
+    <Compile Include="CourseDTO.cs" />
     <Compile Include="Course_Material.cs" />
+    <Compile Include="C__MigrationHistory.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="DepartmentBookDTO.cs" />
+    <Compile Include="Entities.cs" />
     <Compile Include="File.cs" />
     <Compile Include="Magzine.cs" />
     <Compile Include="Magzines_Category.cs" />
