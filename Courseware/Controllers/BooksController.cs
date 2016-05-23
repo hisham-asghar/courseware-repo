@@ -25,6 +25,24 @@ namespace Courseware.Controllers
 
             return View("Search");
         }
+        public ActionResult Update()
+        {
+            object o = Session["user"];
+            string uname = null;
+            if (o != null)
+            {
+                ViewBag.Login = (string)o;
+                o = Session["img"];
+                string image = o != null ? (string)o : "user.png";
+                ViewBag.Image = image;
+            }
+
+            if (ViewBag.Login != "admin")
+                return Redirect("~/Books/");
+            BooksBAL bal = new BooksBAL();
+            List<BookDTO> list = bal.getBooks();
+            return View(list);
+        }
 
         public ActionResult GetJsonData()
         {
@@ -38,7 +56,7 @@ namespace Courseware.Controllers
                 BooksBAL bal = new BooksBAL();
                 var obj = bal.searchByName(str);
                 response.Add(obj);
-            } 
+            }
             if (author)
             {
                 BooksBAL bal = new BooksBAL();
@@ -47,7 +65,35 @@ namespace Courseware.Controllers
             }
 
 
-            return Json(response,JsonRequestBehavior.AllowGet);
+            return Json(response, JsonRequestBehavior.AllowGet);
+        }
+        [HttpPost]
+        public ActionResult delete()
+        {
+            string id = Request["id"];
+            BooksBAL bal = new BooksBAL();
+            bal.delete(id);
+
+            return Json("1", JsonRequestBehavior.AllowGet);
+        }
+        [HttpPost]
+        public ActionResult updateBook()
+        {
+            string id = Request["id"];
+            string name = Request["name"];
+            string author = Request["author"];
+            string cat = Request["cat"];
+            BookDTO dto = new BookDTO();
+            int res;
+            int.TryParse(id,out res);
+            dto.id = res;
+            dto.name = name;
+            dto.author = author;
+            dto.category = cat;
+            BooksBAL bal = new BooksBAL();
+            bal.update(dto);
+
+            return Json("1", JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Search()

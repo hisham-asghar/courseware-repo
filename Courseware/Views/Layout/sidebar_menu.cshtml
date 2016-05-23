@@ -24,6 +24,12 @@
                     <li>
                         <a href='@Url.Content("~/course/Department")' >Department</a>
                     </li>
+                    @if (ViewBag.Login == "admin")
+                    {
+                        <li>
+                            <a href='@Url.Content("~/course/Update")'>Update <span style="color:red">(Admin)</span="></a>
+                        </li>
+                    }
                 </ul>
             </li>
             <li>
@@ -34,7 +40,12 @@
                     </li>
                     <li>
                         <a href='@Url.Content("~/Books/Subjects")' >Subjects</a>
-                    </li>
+                    </li>                    @if (ViewBag.Login == "admin")
+                    {
+                        <li>
+                            <a href='@Url.Content("~/Books/Update")'>Update <span style="color:red">(Admin)</span></a>
+                        </li>
+                    }
                 </ul>
             </li>
             <li>
@@ -45,7 +56,12 @@
                     </li>
                     <li>
                         <a href='@Url.Content("~/Magzines/Category")' >Category</a>
-                    </li>
+                    </li>                    @if (ViewBag.Login == "admin")
+                    {
+                        <li>
+                            <a href='@Url.Content("~/Magzines/Update")'>Update <span style="color:red">(Admin)</span></a>
+                        </li>
+                    }
                 </ul>
             </li>
             <li>
@@ -59,7 +75,12 @@
                     </li>
                     <li>
                         <a href='@Url.Content("~/Lectures/Department")' >Department</a>
-                    </li>
+                    </li>                    @if (ViewBag.Login == "admin")
+                    {
+                        <li>
+                            <a href='@Url.Content("~/Lectures/Update")'>Update <span style="color:red">(Admin)</span></a>
+                        </li>
+                    }
                 </ul>
             </li>
 @if (ViewBag.Login != null) { 

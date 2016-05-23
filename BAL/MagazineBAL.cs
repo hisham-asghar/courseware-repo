@@ -9,12 +9,12 @@ namespace BAL
 {
     public class MagazineBAL
     {
-        public List<Magzine> returnMagazines()
+        public List<MagzineDTO> returnMagazines()
         {
             MagazineDAL d = new MagazineDAL();
             return d.returnMagazines();
         }
-        public Object Search(string sh)
+        public List<RMagzineDTO> Search(string sh)
         {
             MagazineDAL d = new MagazineDAL();
             return d.Search(sh);

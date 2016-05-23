@@ -531,6 +531,8 @@
     <Content Include="Views\Layout\AjaxSearch.cshtml" />
     <Content Include="Views\Books\ShowBook.cshtml" />
     <Content Include="Views\Course\ShowCourse.cshtml" />
+    <Content Include="Views\Magzines\ShowPDF.cshtml" />
+    <Content Include="Views\Books\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

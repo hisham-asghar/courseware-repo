@@ -33,7 +33,7 @@ namespace Courseware.Controllers
             }
 
 
-            return View();
+            return View("ContactUs");
         }
         public ActionResult Monthly()
         {

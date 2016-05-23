@@ -1,30 +1,45 @@
-﻿@model System.Collections.Generic.List<Entities.Magzine>
-@{
-    ViewBag.Title = "Search";
+﻿@{
+    Layout = "~/Views/Layout/AjaxSearch.cshtml";
 }
-@section heading{
-    <h2>Search</h2>
+@section ajaxUrl
+{
+    url : "/Magzines/GetJsonData",
 }
-<form action='@Url.Content("~/Magzines/Search")' method="post">
-    <input type="text" name="textBox" /> <input type="submit" name="btn" value="GO" />
-    </form>
-    @foreach (var item in @Model)
-    {
-        <div class="thumbnail">
-            <div class="image view view-first">
-                <img style="width: 100%; display: block;" src="images/4.jpg" alt="image">
-                <div class="mask">
-                    <p>Your Text</p>
-                    <div class="tools tools-bottom">
-                        <a href="#"><i class="fa fa-link"></i></a>
-                        <a href="#"><i class="fa fa-pencil"></i></a>
-                        <a href="#"><i class="fa fa-times"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="caption">
-                <a>@item.mag_name</a>
-            </div>
-        </div>
-
+@section checkBox
+{
+}
+@section ajaxSendData
+{
+    var data = {
+    str: $("#search_bar").val()
     }
+}
+
+@section ajaxRet{
+    console.log(response);
+    dataBlock.html("");
+    for (var z in response) {
+    //        debugger;
+    var ndata = response[z];
+    var ablock = nblock.clone();
+    var blockData = ablock.find(".x_content .row");
+    for (var x in ndata) {
+    if (ndata.hasOwnProperty(x)) {
+    var item = temp.clone();
+    if (ndata[x].file == null || ndata[x].file.trim() == "") {
+
+    item.find("img").attr("src", '@Url.Content("~/Content/data/book.png")');
+    } else {
+    item.find("img").attr("src", '@Url.Content("~/Content/data/Magzines/")' + ndata[x].file + ".jpg");
+    }
+    item.find(".caption p").html(ndata[x].name);
+
+    item.find(".caption a").attr("href","/Magzines/Show/"+ndata[x].name);
+    blockData.append(item);
+    }
+    }
+    ablock.find(".x_title h2").text("Courses");
+    dataBlock.append(ablock);
+    }
+}
+Magzines

@@ -41,5 +41,20 @@ namespace BAL
        {
            throw new NotImplementedException();
        }
+
+       public List<BookDTO> getBooks()
+       {
+           return dal.getBooks();
+       }
+
+       public void delete(string id)
+       {
+           dal.delete(id);
+       }
+
+       public void update(BookDTO dto)
+       {
+           dal.update(dto);
+       }
     }
 }

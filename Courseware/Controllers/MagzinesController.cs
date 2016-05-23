@@ -29,29 +29,9 @@ namespace Courseware.Controllers
         public ActionResult GetJsonData()
         {
             string str = Request["str"];
-            // bool name = bool.Parse(Request["name"]);
-            // bool author = bool.Parse(Request["author"]);
             var response = new List<object>();
-            var data = new List<object>();
-            for (int i = 0; i < 10 && str != null && str.Trim() != ""; i++)
-            {
-                string ss = Guid.NewGuid().ToString();
-                if (ss.Contains(str))
-                {
-                    object o = new
-                    {
-                        name = ss,
-                        image = "img1.jpg"
-                    };
-
-                    data.Add(o);
-                }
-            }
-            var obj = new
-            {
-                name = "By Name",data
-            };
-            response.Add(obj);
+            MagazineBAL bal = new MagazineBAL();
+            response.Add(bal.Search(str));
             return Json(response, JsonRequestBehavior.AllowGet);
         }
         [HttpGet]
@@ -88,7 +68,7 @@ namespace Courseware.Controllers
 
         }
         [HttpGet]
-        public ActionResult ViewAll()
+        public ActionResult Category()
         {
             object o = Session["user"];
             if (o != null)
@@ -99,9 +79,29 @@ namespace Courseware.Controllers
                 ViewBag.Image = image;
             }
             MagazineBAL bal = new MagazineBAL();
-            List<Magzine> m = bal.returnMagazines();
+            List<MagzineDTO> m = bal.returnMagazines();
 
-            return View("ViewALL",m);
+            return View("ViewALL", m);
+        }
+        public ActionResult Show()
+        {
+            object o = Session["user"];
+            if (o != null)
+            {
+                ViewBag.Login = (string)o;
+                o = Session["img"];
+                string image = o != null ? (string)o : "user.png";
+                ViewBag.Image = image;
+            } 
+            if (Request.Url.Segments.Length == 4)
+            {
+                string s = Request.Url.Segments[3];
+                ViewBag.name = s.Replace("%20", " ");
+                return View("ShowPDF");
+            }
+
+
+            return Redirect("~/Magzines/Category");
         }
 
     }

@@ -66,6 +66,7 @@
     <Compile Include="Entities.cs" />
     <Compile Include="File.cs" />
     <Compile Include="Magzine.cs" />
+    <Compile Include="MagzineDTO.cs" />
     <Compile Include="Magzines_Category.cs" />
     <Compile Include="News.cs" />
     <Compile Include="Post.cs" />

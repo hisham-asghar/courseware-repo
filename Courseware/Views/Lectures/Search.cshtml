@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Layout/AjaxSearch.cshtml";
+}
+@section ajaxUrl
+{
+    url : "/Lectures/GetJsonData",
+}
+@section checkBox{
+    <div class="">
+        <label>
+            <input type="checkbox" class="js-switch" checked="" data-switchery="true" style="display:none;" id="search_name" /> Name
+        </label>
+    </div>
+    <div class="">
+        <label>
+            <input type="checkbox" class="js-switch" checked="" data-switchery="true" style="display:none;" id="search_dept" /> Department
+        </label>
+    </div>
+}
+@section ajaxSendData
+{
+    var nameCheck = parseInt($("#search_name").closest("div").find(".switchery small").css("left")) > 0;
+    var deptCheck = parseInt($("#search_dept").closest("div").find(".switchery small").css("left")) > 0;
+    var data = {
+    str: $("#search_bar").val(),
+    name: nameCheck,
+    department: deptCheck
+    }
+}
+@section defaultItemImage
+{@Url.Content("~/Content/data/book.png")}

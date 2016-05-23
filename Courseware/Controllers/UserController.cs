@@ -92,6 +92,11 @@ namespace Courseware.Controllers
         public ActionResult Register(User dto)
         {
             UserBAL bal = new UserBAL();
+            if (dto.username.ToUpper().Trim() == "ADMIN")
+            {
+                ViewBag.error = "Invalid username or Password";
+                return Redirect("~/User#toregister");
+            }
             int i = bal.saveUser(dto);
             if (i > 0)
             {
